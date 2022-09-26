@@ -12,9 +12,9 @@ document.getElementById('login-button').addEventListener('click', function(){
 
     // Check if the user is valid or not
     if(userEmail === 'myacc@baap.com' && userPassword === 'secrect'){
-        console.log('Valid User');
+        window.location.href = 'bank.html';
     }
     else{
-        console.log('Invalid User');
+        alert('Go ask your daddy!')
     }
 })
