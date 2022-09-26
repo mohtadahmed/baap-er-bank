@@ -13,7 +13,7 @@ document.getElementById('withdraw-button').addEventListener('click', function(){
 
     // Calculate the Total Withdraw Amount
     const totalWithdrawAmount = previousWithdrawAmount + withdrawAmount;
-    currentWithdrawAmount.innerText = totalWithdrawAmount;
+    // currentWithdrawAmount.innerText = totalWithdrawAmount;
 
 
     // Get the Current Total Balance
@@ -23,10 +23,22 @@ document.getElementById('withdraw-button').addEventListener('click', function(){
     
 
     // Update the Total Balance
-    const totalBalance = previousTotalAmount - withdrawAmount;
-    currentTotal.innerText = totalBalance;
+    // const totalBalance = previousTotalAmount - withdrawAmount;
+    // currentTotal.innerText = totalBalance;
 
     // Clear the input field
     withdrawAmountField.value = '';
+
+
+    if(withdrawAmount <= previousTotalAmount){
+        // Update the Total Balance
+        const totalBalance = previousTotalAmount - withdrawAmount;
+        currentTotal.innerText = totalBalance;
+        // Calculate the Total Withdraw Amount
+        currentWithdrawAmount.innerText = totalWithdrawAmount;
+    }
+    else{
+        alert('go and income some money')
+    }
     
 })
